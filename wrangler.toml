@@ -1,0 +1,17 @@
+name = "careernextpivot-demo"
+compatibility_date = "2026-07-01"
+pages_build_output_dir = "site"
+
+# The `functions/` directory (sibling of `site/`) is auto-compiled into Pages
+# Functions by `wrangler pages deploy` — no build step or entry point needed.
+
+# Paste the namespace id below AFTER running:
+#   npx wrangler@latest kv namespace create CNP_LEADS
+# (see DEPLOY.md step 2 — update this id in BOTH the staging copy and the source of truth.)
+[[kv_namespaces]]
+binding = "CNP_LEADS"
+id = "REPLACE_WITH_NAMESPACE_ID"
+
+# NOTE: LEADS_EXPORT_KEY is a SECRET and is deliberately NOT declared under [vars].
+# Set it with:  npx wrangler@latest pages secret put LEADS_EXPORT_KEY --project-name careernextpivot-demo
+# (see DEPLOY.md step 4). Never commit the export key to this file.

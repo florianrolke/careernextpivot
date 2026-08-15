@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Is AI coming for your job? — Free Role Exposure Check | CareerNextPivot</title>
+  <meta name="description" content="Check your role's AI exposure score, scored against research from Stanford, Oxford, McKinsey, and Anthropic. Free, in under a minute." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ============================================================
+       META PIXEL PLACEHOLDER
+       Uncomment and replace <DATASET_ID> with the ID from
+       Meta Events Manager -> Data Sources once partner access
+       is granted. The Lead event stays commented in the success
+       handler (finishForm) until go-live.
+       ------------------------------------------------------------
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','<DATASET_ID>');
+    fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=<DATASET_ID>&ev=PageView&noscript=1"
+  /></noscript>
+       ============================================================ -->
+
+  <style>
+    :root{
+      --paper:#faf7f2; --paper-2:#f3eee4; --ink:#14213d; --ink-soft:#3d4a63;
+      --gold-ink:#8a6d2f; /* gold for TEXT on cream — kickers/labels */
+      --gold:#c8a55c;     /* gold for hairlines/decoration, and TEXT on navy */
+      --hairline:rgba(20,33,61,.14);
+      --hairline-cream:rgba(250,247,242,.22);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    html{-webkit-text-size-adjust:100%}
+    body{
+      font-family:'Inter',system-ui,sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+      overflow-x:hidden;
+      font-weight:400;
+    }
+    h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;margin:0;letter-spacing:.2px}
+    p{margin:0}
+    em{font-style:italic}
+
+    /* ---------- accessibility helpers ---------- */
+    .visually-hidden{
+      position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+    }
+    .skip-link{
+      position:absolute;left:12px;top:-48px;z-index:100;
+      background:var(--ink);color:var(--paper);
+      padding:12px 18px;border-radius:6px;
+      font-family:'Inter',sans-serif;font-size:.82rem;
+      text-decoration:none;transition:top .16s ease;
+    }
+    .skip-link:focus{top:12px}
+
+    a:focus-visible,button:focus-visible,input:focus-visible{
+      outline:2px solid var(--ink);
+      outline-offset:3px;
+    }
+    /* cream outline for interactive elements on the navy card */
+    .card a:focus-visible,.card button:focus-visible,.card input:focus-visible{
+      outline:2px solid var(--paper);
+      outline-offset:3px;
+    }
+
+    .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+    /* kicker label style */
+    .label{
+      font-family:'Inter',sans-serif;font-weight:500;
+      font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;
+      color:var(--gold-ink);
+    }
+
+    /* ---------- header ---------- */
+    .site-header{border-bottom:1px solid var(--hairline);background:var(--paper)}
+    .site-header .wrap{
+      display:flex;align-items:baseline;gap:16px;
+      padding-top:22px;padding-bottom:22px;flex-wrap:wrap;
+    }
+    .wordmark{
+      font-family:'Cormorant Garamond',Georgia,serif;
+      font-weight:400;font-size:clamp(1.35rem,2.4vw,1.7rem);
+      color:var(--ink);letter-spacing:.4px;line-height:1;
+    }
+    .byline{
+      font-family:'Inter',sans-serif;font-weight:500;
+      font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;
+      color:var(--ink-soft);
+    }
+
+    /* ---------- hero ---------- */
+    .hero{padding:clamp(40px,7vw,84px) 0 clamp(48px,7vw,88px)}
+    .hero-grid{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,72px);
+      align-items:center;
+    }
+
+    .kicker{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+    .kicker .rule{width:44px;height:1px;background:var(--gold);flex:none}
+
+    h1{
+      font-size:clamp(2.5rem,6.4vw,4.6rem);
+      line-height:1.02;font-weight:300;letter-spacing:-.5px;
+      color:var(--ink);margin:0 0 24px;
+    }
+    .hero-sub{
+      font-size:clamp(1.02rem,1.5vw,1.18rem);
+      color:var(--ink-soft);font-weight:300;
+      max-width:34em;margin:0 0 34px;
+    }
+
+    .proof-lines{border-top:1px solid var(--hairline);max-width:38em}
+    .proof-lines li{
+      list-style:none;
+      padding:15px 0;border-bottom:1px solid var(--hairline);
+      font-size:.95rem;color:var(--ink);font-weight:400;
+    }
+    .proof-lines{margin:0;padding-left:0}
+    .proof-lines em{color:var(--gold-ink)}
+
+    /* ---------- form card ---------- */
+    .card{
+      background:var(--ink);color:var(--paper);
+      border-radius:16px;
+      padding:clamp(30px,4vw,44px) clamp(26px,3.4vw,40px);
+      box-shadow:0 30px 70px -30px rgba(20,33,61,.55),0 8px 24px -12px rgba(20,33,61,.35);
+    }
+    .card-kicker{
+      font-family:'Inter',sans-serif;font-weight:500;
+      font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;
+      color:var(--gold);margin-bottom:14px;
+    }
+    .card h2{
+      font-family:'Cormorant Garamond',Georgia,serif;
+      color:var(--paper);font-weight:400;
+      font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.08;
+      margin:0 0 8px;
+    }
+    .card .card-lede{
+      color:rgba(250,247,242,.72);font-size:.92rem;font-weight:300;
+      margin-bottom:26px;
+    }
+
+    /* ---------- multi-step form ---------- */
+    .lead-form{position:relative}
+    .step{display:none}
+    .step.active{display:block;animation:stepIn .3s ease}
+    @keyframes stepIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+
+    .field-label{
+      display:block;
+      font-family:'Inter',sans-serif;font-weight:500;
+      font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;
+      color:var(--gold);margin-bottom:12px;
+    }
+    .lead-form input[type="text"],
+    .lead-form input[type="email"]{
+      width:100%;min-height:56px;
+      border:1px solid rgba(250,247,242,.28);
+      border-radius:9px;
+      padding:15px 17px;
+      background:rgba(250,247,242,.06);
+      color:var(--paper);
+      font-family:'Inter',sans-serif;font-weight:400;font-size:1.02rem;
+      transition:border-color .16s ease,box-shadow .16s ease;
+    }
+    .lead-form input::placeholder{color:rgba(250,247,242,.42);font-weight:300}
+    .lead-form input:hover{border-color:rgba(250,247,242,.5)}
+    .lead-form input.invalid,
+    .lead-form input[aria-invalid="true"]{
+      border-color:#e8927c;
+      box-shadow:0 0 0 3px rgba(232,146,124,.28);
+    }
+
+    .err-line{
+      min-height:1.2em;margin-top:9px;
+      font-family:'Inter',sans-serif;font-size:.8rem;font-weight:400;
+      color:#f0b3a1;
+    }
+
+    .step-btn{
+      width:100%;margin-top:18px;min-height:56px;
+      border:0;border-radius:9px;
+      padding:16px 18px;
+      background:var(--gold);color:var(--ink);
+      font-family:'Inter',sans-serif;font-weight:500;
+      font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;
+      cursor:pointer;
+      transition:transform .1s ease,background .16s ease;
+    }
+    .step-btn:hover{background:#d4b46e;transform:translateY(-1px)}
+    .step-btn:active{transform:translateY(0)}
+
+    .trust{
+      margin-top:16px;text-align:center;
+      font-size:.76rem;color:rgba(250,247,242,.6);font-weight:300;
+    }
+
+    /* progress dots */
+    .dots{display:flex;gap:9px;justify-content:center;margin-top:22px}
+    .dots i{
+      width:7px;height:7px;border-radius:50%;
+      background:rgba(250,247,242,.24);transition:background .2s ease,transform .2s ease;
+    }
+    .dots i.on{background:var(--gold);transform:scale(1.2)}
+
+    .shake{animation:shake .3s ease}
+    @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+
+    /* honeypot — visually hidden but present for bots */
+    .hp{
+      position:absolute!important;left:-9999px;top:auto;
+      width:1px;height:1px;overflow:hidden;opacity:0;
+    }
+
+    /* thank-you state */
+    .thanks{display:none}
+    .thanks.active{display:block;animation:stepIn .34s ease}
+    .thanks h2{margin-bottom:14px}
+    .thanks p{color:rgba(250,247,242,.78);font-size:.98rem;font-weight:300;margin-bottom:26px}
+    .thanks-btn{
+      display:inline-block;width:100%;text-align:center;
+      min-height:56px;line-height:24px;
+      padding:16px 18px;border-radius:9px;
+      background:var(--gold);color:var(--ink);text-decoration:none;
+      font-family:'Inter',sans-serif;font-weight:500;
+      font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;
+      transition:transform .1s ease,background .16s ease;
+    }
+    .thanks-btn:hover{background:#d4b46e;transform:translateY(-1px)}
+
+    /* ---------- proof strip ---------- */
+    .proof-strip{
+      border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);
+      background:var(--paper-2);
+      padding:clamp(38px,5vw,58px) 0;
+    }
+    .stats{
+      display:grid;grid-template-columns:repeat(4,1fr);
+      gap:clamp(20px,3vw,40px);text-align:center;
+    }
+    .stat{position:relative}
+    .stat + .stat::before{
+      content:"";position:absolute;left:0;top:14%;bottom:14%;
+      width:1px;background:var(--hairline);
+      transform:translateX(calc(-1 * clamp(10px,1.5vw,20px)));
+    }
+    .stat .num{
+      font-family:'Cormorant Garamond',Georgia,serif;
+      font-weight:300;font-size:clamp(2.6rem,5vw,3.7rem);
+      line-height:1;color:var(--ink);
+    }
+    .stat .cap{
+      display:block;margin-top:12px;
+      font-family:'Inter',sans-serif;font-weight:500;
+      font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--ink-soft);
+    }
+
+    /* ---------- founder quote ---------- */
+    .quote-section{padding:clamp(52px,8vw,96px) 0}
+    .quote-frame{
+      position:relative;max-width:760px;margin:0 auto;
+      padding:clamp(40px,6vw,72px) clamp(28px,5vw,64px);
+      text-align:center;
+    }
+    /* four corner brackets from hairlines */
+    .quote-frame::before,.quote-frame::after{
+      content:"";position:absolute;width:26px;height:26px;pointer-events:none;
+    }
+    .quote-frame::before{
+      top:0;left:0;
+      border-top:1px solid var(--gold);border-left:1px solid var(--gold);
+    }
+    .quote-frame::after{
+      bottom:0;right:0;
+      border-bottom:1px solid var(--gold);border-right:1px solid var(--gold);
+    }
+    .corner-tr,.corner-bl{position:absolute;width:26px;height:26px;pointer-events:none}
+    .corner-tr{top:0;right:0;border-top:1px solid var(--gold);border-right:1px solid var(--gold)}
+    .corner-bl{bottom:0;left:0;border-bottom:1px solid var(--gold);border-left:1px solid var(--gold)}
+
+    .quote-frame blockquote{
+      margin:0;
+      font-family:'Cormorant Garamond',Georgia,serif;
+      font-weight:300;font-style:italic;
+      font-size:clamp(1.6rem,3.6vw,2.5rem);line-height:1.24;
+      color:var(--ink);
+    }
+    .quote-frame cite{
+      display:block;margin-top:26px;font-style:normal;
+      font-family:'Inter',sans-serif;font-weight:500;
+      font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--ink-soft);
+    }
+
+    /* ---------- footer ---------- */
+    .site-footer{
+      border-top:1px solid var(--hairline);
+      padding:clamp(30px,4vw,44px) 0;
+      background:var(--paper);
+    }
+    .foot-top{
+      display:flex;justify-content:space-between;align-items:center;
+      gap:18px;flex-wrap:wrap;margin-bottom:16px;
+    }
+    .foot-copy{font-size:.8rem;color:var(--ink-soft)}
+    .foot-links{display:flex;gap:22px}
+    .foot-links a{
+      font-family:'Inter',sans-serif;font-weight:500;
+      font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--ink-soft);text-decoration:none;
+    }
+    .foot-links a:hover{color:var(--ink)}
+    .methodology{
+      font-size:.72rem;color:var(--ink-soft);line-height:1.6;
+      max-width:64em;font-weight:300;
+    }
+
+    /* ---------- responsive ---------- */
+    @media (max-width:960px){
+      .hero-grid{grid-template-columns:1fr;gap:40px}
+      /* form card FIRST on mobile */
+      .hero-copy{order:2}
+      .hero-form{order:1}
+      .stats{grid-template-columns:1fr 1fr;gap:34px 24px}
+      .stat:nth-child(3)::before,.stat:nth-child(1)::before{display:none}
+    }
+    @media (max-width:560px){
+      .wrap{padding:0 18px}
+      .stats{grid-template-columns:1fr 1fr}
+      .stat::before{display:none!important}
+      .foot-top{flex-direction:column;align-items:flex-start}
+    }
+    @media (max-width:380px){
+      .site-header .wrap{gap:6px 12px}
+    }
+
+    /* ---------- reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{
+        animation-duration:.001ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.001ms!important;
+        scroll-behavior:auto!important;
+      }
+      .step.active,.thanks.active{animation:none}
+      .shake{animation:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap">
+      <span class="wordmark">CareerNextPivot</span>
+      <span class="byline">By ExperienceBypass</span>
+    </div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main id="main">
+
+    <!-- ---- HERO ---- -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+
+          <!-- LEFT: copy -->
+          <div class="hero-copy">
+            <div class="kicker">
+              <span class="rule" aria-hidden="true"></span>
+              <span class="label">Free Role Check</span>
+            </div>
+
+            <h1>Is AI coming for your job?</h1>
+
+            <p class="hero-sub">
+              Check your role&rsquo;s AI exposure score &mdash; scored against research from
+              Stanford, Oxford, McKinsey, and Anthropic. Free, in under a minute.
+            </p>
+
+            <ul class="proof-lines">
+              <li>1,000 roles scored for AI exposure</li>
+              <li>623 pivot destinations with real salary ranges</li>
+              <li>Built by the author of <em>Building the Intelligent Enterprise</em></li>
+            </ul>
+          </div>
+
+          <!-- RIGHT: form card -->
+          <div class="hero-form">
+            <div class="card">
+              <p class="card-kicker">Free Role Check</p>
+              <h2>Check your role &mdash; free.</h2>
+              <p class="card-lede">Three quick questions. Your score in under a minute.</p>
+
+              <!-- progress dots (decorative) + live status -->
+              <p class="visually-hidden" id="stepStatus" aria-live="polite">Step 1 of 3</p>
+
+              <form class="lead-form" id="leadForm" novalidate>
+
+                <!-- honeypot -->
+                <div class="hp" aria-hidden="true">
+                  <label for="company">Company (leave blank)</label>
+                  <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+                </div>
+
+                <!-- STEP 1: job title -->
+                <div class="step active" data-step="1">
+                  <label class="field-label" for="jobTitle">What is your current job title?</label>
+                  <input type="text" id="jobTitle" name="jobTitle"
+                         placeholder="e.g. Operations Manager"
+                         autocomplete="organization-title"
+                         aria-describedby="err-jobTitle" />
+                  <p class="err-line" id="err-jobTitle" aria-live="polite"></p>
+                  <button type="submit" class="step-btn">Check my exposure</button>
+                </div>
+
+                <!-- STEP 2: first name -->
+                <div class="step" data-step="2">
+                  <label class="field-label" for="firstName">And your first name?</label>
+                  <input type="text" id="firstName" name="firstName"
+                         placeholder="First name"
+                         autocomplete="given-name"
+                         aria-describedby="err-firstName" />
+                  <p class="err-line" id="err-firstName" aria-live="polite"></p>
+                  <button type="submit" class="step-btn">Continue</button>
+                </div>
+
+                <!-- STEP 3: email (final) -->
+                <div class="step" data-step="3">
+                  <label class="field-label" for="email">Where should we send your results?</label>
+                  <input type="email" id="email" name="email"
+                         placeholder="you@example.com"
+                         inputmode="email" autocomplete="email"
+                         aria-describedby="err-email" />
+                  <p class="err-line" id="err-email" aria-live="polite"></p>
+                  <button type="submit" class="step-btn">Show my score</button>
+                  <p class="trust">Free &middot; No credit card &middot; Your info is never shared.</p>
+                </div>
+              </form>
+
+              <div class="dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+
+              <!-- THANK-YOU STATE -->
+              <div class="thanks" id="thanks">
+                <h2>Your role check is ready.</h2>
+                <p>Open the Role Explorer and search your title to see your exposure score, trajectory, and pivot options.</p>
+                <a class="thanks-btn" href="https://careernextpivot.com" target="_blank" rel="noopener">Open the Role Explorer</a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- PROOF STRIP ---- -->
+    <section class="proof-strip" aria-label="By the numbers">
+      <div class="wrap">
+        <div class="stats">
+          <div class="stat"><span class="num">1,000</span><span class="cap">Roles scored</span></div>
+          <div class="stat"><span class="num">30</span><span class="cap">Domain specialists</span></div>
+          <div class="stat"><span class="num">623</span><span class="cap">Pivot destinations</span></div>
+          <div class="stat"><span class="num">29</span><span class="cap">Free AI courses</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- FOUNDER QUOTE ---- -->
+    <section class="quote-section">
+      <div class="wrap">
+        <figure class="quote-frame">
+          <span class="corner-tr" aria-hidden="true"></span>
+          <span class="corner-bl" aria-hidden="true"></span>
+          <blockquote>&ldquo;I jumped in at 73. There&rsquo;s no reason you can&rsquo;t start today.&rdquo;</blockquote>
+          <cite>Honorio J. Padr&oacute;n III &middot; Founder, CareerNextPivot</cite>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-top">
+        <span class="foot-copy">&copy; 2026 CareerNextPivot by ExperienceBypass&trade;</span>
+        <nav class="foot-links" aria-label="Legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </nav>
+      </div>
+      <p class="methodology">
+        Exposure tiers synthesize independent research on AI and work (Oxford, OpenAI/UPenn,
+        Goldman Sachs, McKinsey, IMF, WEF). Figures are directional.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ---- 3-step progressive lead capture ----
+    (function(){
+      var form   = document.getElementById('leadForm');
+      var steps  = Array.prototype.slice.call(form.querySelectorAll('.step'));
+      var dots   = Array.prototype.slice.call(document.getElementById('dots').children);
+      var status = document.getElementById('stepStatus');
+      var cur = 0;
+
+      var CFG = [
+        { input:'jobTitle',  err:'err-jobTitle',  msg:'Please enter your job title.' },
+        { input:'firstName', err:'err-firstName', msg:'Please enter your first name.' },
+        { input:'email',     err:'err-email',     msg:'Please enter a valid email address.' }
+      ];
+
+      function setError(input, errEl, bad, msg){
+        if(bad){
+          input.setAttribute('aria-invalid','true');
+          input.classList.add('invalid');
+          errEl.textContent = msg;
+          var st = steps[cur];
+          st.classList.remove('shake'); void st.offsetWidth; st.classList.add('shake');
+          input.addEventListener('input', function h(){
+            input.removeAttribute('aria-invalid');
+            input.classList.remove('invalid');
+            errEl.textContent = '';
+            input.removeEventListener('input', h);
+          });
+        } else {
+          input.removeAttribute('aria-invalid');
+          input.classList.remove('invalid');
+          errEl.textContent = '';
+        }
+        return !bad;
+      }
+
+      function validate(){
+        var c = CFG[cur];
+        var input = document.getElementById(c.input);
+        var errEl = document.getElementById(c.err);
+        var bad;
+        if(cur === 2){
+          bad = !(input.value.trim() !== '' && input.checkValidity());
+        } else {
+          bad = input.value.trim() === '';
+        }
+        return setError(input, errEl, bad, c.msg);
+      }
+
+      function show(i){
+        steps[cur].classList.remove('active');
+        cur = i;
+        steps[cur].classList.add('active');
+        dots.forEach(function(d, k){ d.classList.toggle('on', k <= cur); });
+        status.textContent = 'Step ' + (cur + 1) + ' of 3';
+        var first = steps[cur].querySelector('input');
+        if(first) setTimeout(function(){ first.focus(); }, 260);
+      }
+
+      function submitLead(){
+        var payload = {
+          email:    document.getElementById('email').value.trim(),
+          name:     document.getElementById('firstName').value.trim(),
+          jobTitle: document.getElementById('jobTitle').value.trim(),
+          source:   'lp',
+          company:  document.getElementById('company').value
+        };
+        // Fire-and-forget: thank-you shows regardless of outcome (never strand an ad click).
+        try {
+          fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).catch(function(err){ console.error('subscribe failed:', err); });
+        } catch(err){
+          console.error('subscribe threw:', err);
+        }
+      }
+
+      function finishForm(){
+        submitLead();
+        form.style.display = 'none';
+        document.getElementById('dots').style.display = 'none';
+        document.getElementById('thanks').classList.add('active');
+        status.textContent = 'Your role check is ready.';
+        // if (typeof fbq === 'function') fbq('track','Lead');
+        var cta = document.querySelector('.thanks-btn');
+        if(cta) setTimeout(function(){ cta.focus(); }, 260);
+      }
+
+      form.addEventListener('submit', function(ev){
+        ev.preventDefault();
+        if(!validate()) return;
+        if(cur < steps.length - 1) show(cur + 1);
+        else finishForm();
+      });
+    })();
+  </script>
+</body>
+</html>

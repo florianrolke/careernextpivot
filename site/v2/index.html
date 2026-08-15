@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- TITLE -->
+	<title>CareerNextPivot by ExperienceBypass</title>
+	<meta name="description" content="Score your role against research from Stanford, Oxford, McKinsey, and Anthropic. See where you can pivot, what it pays, and build your personalized three-phase Pivot Plan. By ExperienceBypass." />
+
+	<!-- ============================================================
+	     META PIXEL PLACEHOLDER
+	     Uncomment and replace <DATASET_ID> with the ~16-digit ID from
+	     Meta Events Manager -> Data Sources once partner access is
+	     granted. The Lead event stays commented in the popup/inline
+	     success handlers until go-live.
+	     ------------------------------------------------------------
+	<script>
+	  !function(f,b,e,v,n,t,s)
+	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	  n.queue=[];t=b.createElement(e);t.async=!0;
+	  t.src=v;s=b.getElementsByTagName(e)[0];
+	  s.parentNode.insertBefore(t,s)}(window, document,'script',
+	  'https://connect.facebook.net/en_US/fbevents.js');
+	  fbq('init','<DATASET_ID>');
+	  fbq('track','PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	  src="https://www.facebook.com/tr?id=<DATASET_ID>&ev=PageView&noscript=1"
+	/></noscript>
+	     ============================================================ -->
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700%7CRoboto:400,400i,700" rel="stylesheet">
+
+	<!-- ICONS -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
+
+	<!-- STYLES -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/theme-cnp.css">
+
+	<!-- No-JS: the role explorer is JS-rendered; show a message if JS is off. -->
+	<noscript>
+		<style>.role-grid .no-results-js{display:block!important;}</style>
+	</noscript>
+</head>
+<body class="home-09">
+
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<nav class="navbar corporex-navbar navbar-01 navbar-cnp-dark">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+
+					<a class="navbar-brand cnp-wordmark" href="#main" aria-label="CareerNextPivot home">
+						<span class="mark">CareerNextPivot</span>
+						<span class="byline">by ExperienceBypass</span>
+					</a>
+				</div> <!-- .navbar-header -->
+
+				<div class="collapse navbar-collapse navbar-items" id="navbar-items">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#main">Home</a></li>
+						<li><a href="#explorer">Role Explorer</a></li>
+						<li><a href="#pricing">Pricing</a></li>
+						<li><a href="#features">Features</a></li>
+						<li><a href="#meet-ha">Meet H.A.</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#newsletter">Newsletter</a></li>
+						<li><a class="btn btn-main nav-cta" href="#explorer">Check my role</a></li>
+					</ul> <!-- .nav navbar-nav -->
+				</div> <!-- .collapse navbar-collapse -->
+			</div> <!-- .container -->
+		</nav> <!-- .navbar -->
+	</header> <!-- .site-header -->
+
+	<main id="main">
+
+		<!-- ============ HERO (two-column: copy + H.A. image) ============ -->
+		<section class="cnp-hero cnp-hero--split" aria-labelledby="hero-h1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 hero-copy">
+						<p class="cnp-eyebrow"><span class="rule" aria-hidden="true"></span>Built on research from Stanford &middot; Oxford &middot; McKinsey &middot; Anthropic</p>
+						<h1 id="hero-h1">Know your AI risk. <span class="accent">Own your next move.</span></h1>
+						<p class="hero-sub">You built your career over decades. AI is rewriting the rules. Here is how you find what comes next &mdash; without starting over.</p>
+						<div class="hero-meta" aria-label="Highlights">
+							<span class="meta-item">First results in 90 days</span>
+							<span class="dot" aria-hidden="true"></span>
+							<span class="meta-item">Built for mid-career professionals and executives</span>
+						</div>
+						<div class="hero-cta">
+							<a class="btn btn-main" href="#explorer">Check my role</a>
+							<a class="btn btn-outline-cnp" href="#pricing">See pricing</a>
+						</div>
+					</div> <!-- .hero-copy -->
+					<div class="col-md-6 hero-visual">
+						<figure class="ha-frame ha-frame--hero">
+							<img src="img/ha-hands.webp" width="512" height="512"
+							     alt="H.A., the Human Horizon Advisor &mdash; CareerNextPivot's AI advisor" loading="eager" decoding="async" />
+						</figure>
+					</div> <!-- .hero-visual -->
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</section> <!-- .cnp-hero -->
+
+		<!-- ============ MOVING TICKER (roles / salary / demand) ============ -->
+		<div class="cnp-ticker" aria-hidden="true">
+			<div class="cnp-ticker__track">
+				<ul class="cnp-ticker__list">
+					<li class="cnp-ticker__item"><span class="tk-role">MLOps Engineer</span><span class="tk-sep">/</span><span class="tk-pay">$115&ndash;$185K</span><span class="tk-sep">/</span><span class="tk-demand tk-demand--surging">Surging</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">AI Product Manager</span><span class="tk-sep">/</span><span class="tk-pay">$120&ndash;$195K</span><span class="tk-sep">/</span><span class="tk-demand tk-demand--surging">Surging</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Clinical AI Analyst</span><span class="tk-sep">/</span><span class="tk-pay">$80&ndash;$135K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">LegalTech Implementation Specialist</span><span class="tk-sep">/</span><span class="tk-pay">$90&ndash;$150K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">AI Security Specialist</span><span class="tk-sep">/</span><span class="tk-pay">$105&ndash;$175K</span><span class="tk-sep">/</span><span class="tk-demand tk-demand--surging">Surging</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Health Data Scientist</span><span class="tk-sep">/</span><span class="tk-pay">$90&ndash;$150K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Robotics Engineer</span><span class="tk-sep">/</span><span class="tk-pay">$100&ndash;$175K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Deep Learning Engineer</span><span class="tk-sep">/</span><span class="tk-pay">$115&ndash;$190K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Revenue Operations Analyst</span><span class="tk-sep">/</span><span class="tk-pay">$75&ndash;$125K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">AI Agent Engineer</span><span class="tk-sep">/</span><span class="tk-pay">$120&ndash;$195K</span><span class="tk-sep">/</span><span class="tk-demand tk-demand--surging">Surging</span></li>
+				</ul>
+				<ul class="cnp-ticker__list cnp-ticker__list--dup">
+					<li class="cnp-ticker__item"><span class="tk-role">MLOps Engineer</span><span class="tk-sep">/</span><span class="tk-pay">$115&ndash;$185K</span><span class="tk-sep">/</span><span class="tk-demand tk-demand--surging">Surging</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">AI Product Manager</span><span class="tk-sep">/</span><span class="tk-pay">$120&ndash;$195K</span><span class="tk-sep">/</span><span class="tk-demand tk-demand--surging">Surging</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Clinical AI Analyst</span><span class="tk-sep">/</span><span class="tk-pay">$80&ndash;$135K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">LegalTech Implementation Specialist</span><span class="tk-sep">/</span><span class="tk-pay">$90&ndash;$150K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">AI Security Specialist</span><span class="tk-sep">/</span><span class="tk-pay">$105&ndash;$175K</span><span class="tk-sep">/</span><span class="tk-demand tk-demand--surging">Surging</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Health Data Scientist</span><span class="tk-sep">/</span><span class="tk-pay">$90&ndash;$150K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Robotics Engineer</span><span class="tk-sep">/</span><span class="tk-pay">$100&ndash;$175K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Deep Learning Engineer</span><span class="tk-sep">/</span><span class="tk-pay">$115&ndash;$190K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">Revenue Operations Analyst</span><span class="tk-sep">/</span><span class="tk-pay">$75&ndash;$125K</span><span class="tk-sep">/</span><span class="tk-demand">High</span></li>
+					<li class="cnp-ticker__item"><span class="tk-role">AI Agent Engineer</span><span class="tk-sep">/</span><span class="tk-pay">$120&ndash;$195K</span><span class="tk-sep">/</span><span class="tk-demand tk-demand--surging">Surging</span></li>
+				</ul>
+			</div> <!-- .cnp-ticker__track -->
+		</div> <!-- .cnp-ticker -->
+
+		<!-- ============ ROLE EXPLORER ============ -->
+		<section class="explorer-section section-block" id="explorer" aria-labelledby="explorer-h2">
+			<div class="container">
+				<div class="title-block" style="text-align:left;max-width:none;margin-bottom:8px;">
+					<p class="cnp-eyebrow-left"><span class="rule" aria-hidden="true"></span>The Role Explorer</p>
+					<h2 id="explorer-h2" style="text-align:left;">The Role Explorer</h2>
+					<p class="cnp-note">Showing 20 representative roles. The full database of 1,000 scored roles connects at handoff.</p>
+				</div> <!-- .title-block -->
+
+				<!-- H.A. says callout -->
+				<div class="ha-says">
+					<span class="ha-says__img"><img src="img/ha-point.webp" width="128" height="128" alt="H.A., the Human Horizon Advisor" loading="lazy" decoding="async" /></span>
+					<div>
+						<p class="ha-says__label">H.A. says</p>
+						<p class="ha-says__text">Start here. Find your role, see exactly where AI is taking it.</p>
+					</div>
+				</div>
+
+				<!-- how it works -->
+				<ol class="how-steps" aria-label="How it works">
+					<li class="step"><span class="num" aria-hidden="true">01</span><div><h4>Choose your field</h4><p>Pick a job category, or search directly by title.</p></div></li>
+					<li class="step"><span class="num" aria-hidden="true">02</span><div><h4>Select a role</h4><p>Narrow by AI exposure or trajectory, then open your role to see its score and timeline.</p></div></li>
+					<li class="step"><span class="num" aria-hidden="true">03</span><div><h4>Explore your pivots</h4><p>See where you can realistically move, what it pays, and where people are hiring.</p></div></li>
+					<li class="step"><span class="num" aria-hidden="true">04</span><div><h4>Build your toolkit</h4><p>Consult the Expert Panel, build your r&eacute;sum&eacute; and cover letter, and run a JD match for any posting.</p></div></li>
+					<li class="step"><span class="num" aria-hidden="true">05</span><div><h4>Get your plan</h4><p>H.A. builds your personalized three-phase transformation plan &mdash; specific tasks, courses, and milestones. Full access from $40 for 3 months.</p></div></li>
+				</ol>
+
+				<!-- category grid (job families) -->
+				<div class="category-block">
+					<ul class="category-grid" aria-label="Job families in the full role map">
+						<li><span class="cat-chip is-active">All roles <span class="cat-count">1000</span></span></li>
+						<li><span class="cat-chip">Admin/Clerical <span class="cat-count">65</span></span></li>
+						<li><span class="cat-chip">Agriculture <span class="cat-count">22</span></span></li>
+						<li><span class="cat-chip">Architecture/Eng <span class="cat-count">26</span></span></li>
+						<li><span class="cat-chip">Aviation <span class="cat-count">25</span></span></li>
+						<li><span class="cat-chip">Beauty/Personal Care <span class="cat-count">17</span></span></li>
+						<li><span class="cat-chip">Construction <span class="cat-count">31</span></span></li>
+						<li><span class="cat-chip">Creative/Media <span class="cat-count">30</span></span></li>
+						<li><span class="cat-chip">Customer Facing <span class="cat-count">26</span></span></li>
+						<li><span class="cat-chip">Education <span class="cat-count">21</span></span></li>
+						<li><span class="cat-chip">Energy/Utilities <span class="cat-count">37</span></span></li>
+						<li><span class="cat-chip">Finance/Accounting <span class="cat-count">61</span></span></li>
+						<li><span class="cat-chip">Government <span class="cat-count">31</span></span></li>
+						<li><span class="cat-chip">Healthcare Admin <span class="cat-count">58</span></span></li>
+						<li><span class="cat-chip">Hospitality <span class="cat-count">33</span></span></li>
+						<li><span class="cat-chip">HR/Management <span class="cat-count">36</span></span></li>
+						<li><span class="cat-chip">Insurance <span class="cat-count">23</span></span></li>
+						<li><span class="cat-chip">Legal/Compliance <span class="cat-count">38</span></span></li>
+						<li><span class="cat-chip">Logistics/Ops <span class="cat-count">26</span></span></li>
+						<li><span class="cat-chip">Manufacturing <span class="cat-count">29</span></span></li>
+						<li><span class="cat-chip">Marketing <span class="cat-count">31</span></span></li>
+						<li><span class="cat-chip">Media/Entertainment <span class="cat-count">33</span></span></li>
+						<li><span class="cat-chip">Military/Veterans <span class="cat-count">20</span></span></li>
+						<li><span class="cat-chip">Non-Profit <span class="cat-count">28</span></span></li>
+						<li><span class="cat-chip">Real Estate <span class="cat-count">24</span></span></li>
+						<li><span class="cat-chip">Research/Science <span class="cat-count">19</span></span></li>
+						<li><span class="cat-chip">Retail/Food <span class="cat-count">34</span></span></li>
+						<li><span class="cat-chip">Sales <span class="cat-count">54</span></span></li>
+						<li><span class="cat-chip">Sports/Fitness <span class="cat-count">20</span></span></li>
+						<li><span class="cat-chip">Technology <span class="cat-count">77</span></span></li>
+						<li><span class="cat-chip">Transportation <span class="cat-count">25</span></span></li>
+					</ul>
+					<p class="cat-note">A preview of the 30 job families in the full role map. The 20 representative roles below are searchable now; the complete database connects at handoff.</p>
+				</div>
+
+				<!-- filters -->
+				<div class="explorer-controls">
+					<label class="form-label" for="explorer-search">Search roles</label>
+					<input class="form-control" type="text" id="explorer-search" name="explorer-search" placeholder="Search by role title" autocomplete="off" />
+
+					<div class="filter-group" role="group" aria-labelledby="exposure-label">
+						<span class="form-label" id="exposure-label">Exposure</span>
+						<div class="toggle-row">
+							<button type="button" class="filter-toggle" data-filter="exposure" data-value="all" aria-pressed="true">All</button>
+							<button type="button" class="filter-toggle" data-filter="exposure" data-value="90" aria-pressed="false">Extreme 90+</button>
+							<button type="button" class="filter-toggle" data-filter="exposure" data-value="75" aria-pressed="false">Very high 75+</button>
+							<button type="button" class="filter-toggle" data-filter="exposure" data-value="65" aria-pressed="false">High 65+</button>
+						</div>
+					</div>
+
+					<div class="filter-group" role="group" aria-labelledby="trajectory-label">
+						<span class="form-label" id="trajectory-label">Trajectory</span>
+						<div class="toggle-row">
+							<button type="button" class="filter-toggle" data-filter="trajectory" data-value="all" aria-pressed="true">All</button>
+							<button type="button" class="filter-toggle" data-filter="trajectory" data-value="Being eliminated" aria-pressed="false">Being eliminated</button>
+							<button type="button" class="filter-toggle" data-filter="trajectory" data-value="Shrinking" aria-pressed="false">Shrinking</button>
+						</div>
+					</div>
+				</div>
+
+				<p class="result-count" id="resultCount" aria-live="polite">20 roles shown</p>
+
+				<div class="role-grid" id="roleGrid">
+					<p class="no-results no-results-js" style="display:none;">Enable JavaScript to explore the 20 representative roles.</p>
+				</div>
+			</div> <!-- .container -->
+		</section> <!-- .explorer-section -->
+
+		<!-- ============ FUN FACTS (counters + proof) ============ -->
+		<section class="fun-facts-section cnp-facts section-block" aria-labelledby="facts-h2">
+			<div class="container">
+				<h2 id="facts-h2" class="sr-only">By the numbers</h2>
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<i class="pe-7s-graph1" aria-hidden="true"></i>
+						<h3><span class="counter">1,000</span> Roles scored</h3>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<i class="pe-7s-users" aria-hidden="true"></i>
+						<h3><span class="counter">30</span> Domain specialists</h3>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<i class="pe-7s-map-2" aria-hidden="true"></i>
+						<h3><span class="counter">623</span> Pivot destinations</h3>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<i class="pe-7s-study" aria-hidden="true"></i>
+						<h3><span class="counter">29</span> Free AI courses</h3>
+					</div>
+				</div> <!-- .row -->
+				<p class="cnp-proof-line">Scored against findings from Stanford, Oxford, McKinsey, and Anthropic. Not opinion. Evidence.</p>
+			</div> <!-- .container -->
+		</section> <!-- .fun-facts-section -->
+
+		<!-- ============ PRICING ============ -->
+		<section class="pricing-section section-block" id="pricing" aria-labelledby="pricing-h2">
+			<div class="container">
+				<div class="title-block">
+					<p class="cnp-eyebrow-left" style="justify-content:center;"><span class="rule" aria-hidden="true"></span>Pricing</p>
+					<h2 id="pricing-h2">Everything CareerNextPivot</h2>
+					<p>Browse the role map free. Full access delivers your personalized Pivot Plan &mdash; a three-phase roadmap built around your exact role, your target, and your timeline.</p>
+				</div> <!-- .title-block -->
+
+				<!-- Advisory team / What's included -->
+				<div class="advisory-panel">
+					<div class="advisory-split">
+						<div class="advisory-team">
+							<p class="panel-label">Your advisory team</p>
+							<div class="who">
+								<span class="who__img"><img src="img/ha-point.webp" width="144" height="144" alt="H.A., the Human Horizon Advisor" loading="lazy" decoding="async" /></span>
+								<div>
+									<p class="who__name">H.A.</p>
+									<p class="who__role">Human Horizon Advisor</p>
+								</div>
+							</div>
+							<p class="team-quote">623 pivot destinations across 30 industries. Salary, demand, and open jobs. All waiting here.</p>
+							<a class="btn btn-gold" href="#pricing-tiers">Unlock Full Access &middot; $40</a>
+							<a class="have-key" href="#" title="Live sign-in connects at handoff">I already have a key</a>
+							<p class="fine">2 devices &middot; 90 days from first activation.</p>
+						</div>
+						<div class="advisory-included">
+							<p class="panel-label">What&rsquo;s included</p>
+							<ul>
+								<li><strong>Personalized Pivot Plan</strong> &mdash; H.A.-generated 3-phase transformation roadmap for your exact role and target</li>
+								<li><strong>AI exposure diagnosis</strong> &mdash; score, risk timeline, task vulnerability</li>
+								<li><strong>623 pivot destinations</strong> with salary, demand &amp; training paths</li>
+								<li><strong>Expert Panel</strong> &mdash; 30 domain advisors, up to 3 at once</li>
+								<li><strong>R&eacute;sum&eacute; Builder + Cover Letter</strong> tailored to your pivot</li>
+								<li><strong>JD Match</strong> &mdash; close your skill gaps for any posting</li>
+								<li><strong>Ask H.A.</strong> &mdash; unlimited advisor access</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="row price-table" id="pricing-tiers">
+					<!-- Individual (featured) -->
+					<div class="price-col">
+						<div class="price-box featured" aria-labelledby="price-ind">
+							<span class="price-badge">Most chosen</span>
+							<h3 id="price-ind">Individual</h3>
+							<p class="cost">$40 <small>/ 3 months</small></p>
+							<p class="tagline">For professionals taking control of their career in the AI shift.</p>
+							<ul>
+								<li>Personalized Pivot Plan &mdash; a three-phase transformation plan built for you</li>
+								<li>AI exposure diagnosis &mdash; score, risk timeline, task vulnerability</li>
+								<li>623 pivot destinations with salary, demand, and training paths</li>
+								<li>H.A., the Human Horizon Advisor, on demand</li>
+								<li>Expert Panel &mdash; 30 domain specialists, up to 3 at once</li>
+								<li>R&eacute;sum&eacute; Builder, Cover Letter, and JD Match</li>
+								<li>Free AI training &mdash; 29 courses from Harvard, MIT, and Google</li>
+							</ul>
+							<div class="price-cta">
+								<a class="btn btn-cream" href="#" title="Live checkout connects at handoff">Get started &middot; $40</a>
+								<a class="have-key" href="#" title="Live sign-in connects at handoff">I already have a key</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Team -->
+					<div class="price-col">
+						<div class="price-box" aria-labelledby="price-team">
+							<h3 id="price-team">Team</h3>
+							<p class="cost">$2,900 <small>/ year</small></p>
+							<p class="tagline">AI readiness for managers, up to 10 people.</p>
+							<ul>
+								<li>Up to 10 seats, full annual access</li>
+								<li>A Pivot Plan for every member</li>
+								<li>Everything in Individual</li>
+								<li>Team AI-exposure snapshot by role</li>
+								<li>Priority onboarding</li>
+							</ul>
+							<div class="price-cta">
+								<a class="btn btn-main" href="#" title="Inquiry form connects at handoff">Inquire</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Department -->
+					<div class="price-col">
+						<div class="price-box" aria-labelledby="price-dept">
+							<h3 id="price-dept">Department</h3>
+							<p class="cost">$5,900 <small>/ year</small></p>
+							<p class="tagline">Workforce AI readiness for HR and L&amp;D, up to 50 people.</p>
+							<ul>
+								<li>Up to 50 seats</li>
+								<li>Everything in Team</li>
+								<li>Department-wide exposure benchmark</li>
+								<li>Exportable reports for executive review</li>
+							</ul>
+							<div class="price-cta">
+								<a class="btn btn-main" href="#" title="Inquiry form connects at handoff">Inquire</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Enterprise -->
+					<div class="price-col">
+						<div class="price-box" aria-labelledby="price-ent">
+							<h3 id="price-ent">Enterprise</h3>
+							<p class="cost">Custom</p>
+							<p class="tagline">AI readiness at scale across the full workforce.</p>
+							<ul>
+								<li>Unlimited seats</li>
+								<li>Everything in Department</li>
+								<li>White-labeled or co-branded</li>
+								<li>Custom workforce readiness assessment</li>
+							</ul>
+							<div class="price-cta">
+								<a class="btn btn-main" href="#" title="Contact form connects at handoff">Talk to us</a>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .row -->
+
+				<p class="price-fine">2 devices &middot; 90 days from first activation.</p>
+			</div> <!-- .container -->
+		</section> <!-- .pricing-section -->
+
+		<!-- ============ FEATURES / INSIDE THE PRODUCT ============ -->
+		<section class="features-section section-block" id="features" aria-labelledby="features-h2">
+			<div class="container">
+				<div class="title-block">
+					<p class="cnp-eyebrow-left" style="justify-content:center;"><span class="rule" aria-hidden="true"></span>Inside the product</p>
+					<h2 id="features-h2">Everything you need to make the move</h2>
+				</div> <!-- .title-block -->
+
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="feature-item">
+							<div class="icon-box"><i class="pe-7s-tools" aria-hidden="true"></i></div>
+							<h3>The Toolkit</h3>
+							<p>R&eacute;sum&eacute; Builder, Cover-Letter Generator, JD Match. A complete AI-era r&eacute;sum&eacute; that positions you as the solution. A focused cover letter for the move you are making. A gap analysis for any job posting.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="feature-item">
+							<div class="icon-box"><i class="pe-7s-map-2" aria-hidden="true"></i></div>
+							<h3>The Pivot Plan</h3>
+							<ol class="timeline-line" aria-label="Three-phase plan">
+								<li>Protect &amp; Prepare</li>
+								<li class="arrow" aria-hidden="true">&rarr;</li>
+								<li>Build &amp; Pivot</li>
+								<li class="arrow" aria-hidden="true">&rarr;</li>
+								<li>Emerge &amp; Advance</li>
+								<li class="dur">90&ndash;180 days.</li>
+							</ol>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="feature-item">
+							<div class="icon-box"><i class="pe-7s-chat" aria-hidden="true"></i></div>
+							<h3>Ask H.A.</h3>
+							<p>H.A. &mdash; the Human Horizon Advisor. A digital twin of Honorio J. Padr&oacute;n III, author of <em>Building the Intelligent Enterprise</em>. Ask where AI is taking your work, and what to do about it. Unlimited with membership.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="feature-item">
+							<div class="icon-box"><i class="pe-7s-users" aria-hidden="true"></i></div>
+							<h3>The Expert Panel</h3>
+							<p>Thirty domain specialists focused on the AI era. Consult up to three at once for perspective on your specific move &mdash; across marketing, legal, healthcare, finance, engineering, and more.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="feature-item">
+							<div class="icon-box"><i class="pe-7s-compass" aria-hidden="true"></i></div>
+							<h3>The Pivot Directory</h3>
+							<p>623 pivot destinations, mapped. Jobs being created faster than the market can fill them &mdash; each linked to the roles that feed into it, with salary, demand, and training paths.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="feature-item">
+							<div class="icon-box"><i class="pe-7s-study" aria-hidden="true"></i></div>
+							<h3>Free AI Training</h3>
+							<p>29 courses from Harvard, MIT, Google, and more. Free to start. No credit card.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="feature-item">
+							<div class="icon-box"><i class="pe-7s-micro" aria-hidden="true"></i></div>
+							<h3>The Podcast</h3>
+							<p>Honest, ground-level conversations about navigating AI and work. Latest: a conversation with Irving.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="feature-item">
+							<div class="icon-box"><i class="pe-7s-notebook" aria-hidden="true"></i></div>
+							<h3>H.A.&rsquo;s Reading List</h3>
+							<p>Six books, ordered from most urgent to most optimistic.</p>
+							<ol class="spine" aria-label="Reading list">
+								<li><span class="idx" aria-hidden="true">1</span>The most urgent read first</li>
+								<li><span class="idx" aria-hidden="true">2</span>On the shape of the transition</li>
+								<li><span class="idx" aria-hidden="true">3</span>On work that endures</li>
+								<li><span class="idx" aria-hidden="true">4</span>On building with the machine</li>
+								<li><span class="idx" aria-hidden="true">5</span>On the human advantage</li>
+								<li><span class="idx" aria-hidden="true">6</span>The most optimistic read last</li>
+							</ol>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6">
+						<div class="feature-item">
+							<div class="icon-box"><i class="pe-7s-comment" aria-hidden="true"></i></div>
+							<h3>Pivot Stories</h3>
+							<blockquote class="story-quote">
+								We had schedulers, quality inspectors, and planners who knew the floor better than any AI. So we moved them to where AI can&rsquo;t go: customer trust.
+								<cite>A featured Pivot Story</cite>
+							</blockquote>
+						</div>
+					</div>
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</section> <!-- .features-section -->
+
+		<!-- ============ MEET H.A. ============ -->
+		<section class="meet-ha-section section-block" id="meet-ha" aria-labelledby="meetha-h2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<figure class="meet-ha-portrait">
+							<img src="img/ha-portrait.webp" width="512" height="512"
+							     alt="H.A., the digital twin of Honorio J. Padr&oacute;n III" loading="lazy" decoding="async" />
+						</figure>
+					</div>
+					<div class="col-md-7 meet-ha-copy">
+						<p class="cnp-eyebrow-left"><span class="rule" aria-hidden="true"></span>Human Horizon Advisor // AI built on a human</p>
+						<h2 id="meetha-h2">Meet H.A.</h2>
+						<p class="subhead">The First Intelligent Enterprise Architect (Engineering the Human Impact Factor)</p>
+						<blockquote>AI does not take jobs. It takes tasks. The people who struggle are the ones who never learned the difference. Decide which of your tasks are worth keeping, hand the rest to the machine, and you stop being something AI replaces and start being someone it needs.</blockquote>
+						<p class="ha-body">H.A. is Honorio J. Padr&oacute;n&rsquo;s digital twin, and the closing voice of the upcoming book <em>Building the Intelligent Enterprise</em>, where he gives a practitioner&rsquo;s perspective at the end of every chapter.</p>
+						<div class="ha-cta">
+							<a class="btn btn-gold" href="#pricing">Consult H.A. &middot; Get Full Access $40</a>
+							<span class="note">Includes 30 domain specialists and your complete career toolkit</span>
+						</div>
+					</div>
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</section> <!-- .meet-ha-section -->
+
+		<!-- ============ PERSONAL ASSESSMENT ============ -->
+		<section class="assessment-section section-block" aria-labelledby="assess-h2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<p class="cnp-eyebrow-left"><span class="rule" aria-hidden="true"></span>Personal Assessment</p>
+						<h2 id="assess-h2" style="text-align:left;">Seven strategic questions</h2>
+						<p style="color:#3d4a63;font-size:15px;line-height:1.7;">Answer seven questions about how you work and what you want next. Every answer is scored to determine your optimal pivot paths and your timeline. Included with membership.</p>
+					</div>
+					<div class="col-md-6 col-md-offset-1">
+						<ol class="assessment-list" aria-label="Assessment themes">
+							<li><span class="n" aria-hidden="true">1</span><span class="t">How you spend your working hours</span></li>
+							<li><span class="n" aria-hidden="true">2</span><span class="t">What you want to keep</span></li>
+							<li><span class="n" aria-hidden="true">3</span><span class="t">What you are willing to retrain</span></li>
+							<li><span class="n" aria-hidden="true">4</span><span class="t">Your timeline and risk tolerance</span></li>
+							<li><span class="n" aria-hidden="true">5</span><span class="t">The environments where you do your best work</span></li>
+							<li><span class="n" aria-hidden="true">6</span><span class="t">The problems you most want to solve</span></li>
+							<li><span class="n" aria-hidden="true">7</span><span class="t">Where you want to be in five years</span></li>
+						</ol>
+					</div>
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</section> <!-- .assessment-section -->
+
+		<!-- ============ ABOUT H.A. / FOUNDER ============ -->
+		<section class="about-ha-section section-block" id="about" style="background:#f5f6f9;" aria-labelledby="about-h2">
+			<div class="container">
+				<div class="title-block" style="text-align:left;max-width:none;">
+					<p class="cnp-eyebrow-left"><span class="rule" aria-hidden="true"></span>The founder &amp; the panel</p>
+					<h2 id="about-h2" style="text-align:left;">Thirty specialists, and the founder who started at 73</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-7 ha-copy">
+						<p>H.A. &mdash; the Human Horizon Advisor &mdash; is a digital twin of Honorio J. Padr&oacute;n III, author of <em>Building the Intelligent Enterprise</em>. Ask where AI is taking your work, and what to do about it. H.A. draws on decades of enterprise transformation experience and the same research that scores every role in the Explorer.</p>
+						<p>The Expert Panel behind H.A. brings thirty specialists to the table &mdash; real people with real domain expertise, focused on the AI era.</p>
+						<ul class="discipline-grid" aria-label="Panel disciplines">
+							<li>Marketing</li>
+							<li>Manufacturing</li>
+							<li>Legal</li>
+							<li>Healthcare</li>
+							<li>Finance</li>
+							<li>Engineering</li>
+							<li>Education</li>
+							<li>Public Sector</li>
+							<li>Technology</li>
+							<li>Human Resources</li>
+						</ul>
+					</div>
+					<div class="col-md-5">
+						<figure class="founder-quote">
+							<blockquote>I jumped in at 73. There&rsquo;s no reason you can&rsquo;t start today.</blockquote>
+							<cite>Honorio J. Padr&oacute;n III &middot; Founder, CareerNextPivot &middot; Author of <em>Building the Intelligent Enterprise</em></cite>
+						</figure>
+					</div>
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</section> <!-- .about-ha-section -->
+
+		<!-- ============ CTA BAND ============ -->
+		<section class="cta-bar" aria-labelledby="cta-h2">
+			<div class="container">
+				<h2 id="cta-h2">Find what comes next</h2>
+				<p>Browse the role map free. Build your Pivot Plan when you are ready.</p>
+				<a class="cta-btn btn btn-ghost" href="#explorer">Check my role</a>
+			</div> <!-- .container -->
+		</section> <!-- .cta-bar -->
+
+		<!-- ============ NEWSLETTER — The Pivot Brief ============ -->
+		<section class="newsletter-cnp section-block" id="newsletter" aria-labelledby="news-h2">
+			<div class="container" style="text-align:center;">
+				<p class="cnp-eyebrow-left" style="justify-content:center;"><span class="rule" aria-hidden="true"></span>The Pivot Brief</p>
+				<h2 id="news-h2">Research-backed pivot moves, in five minutes a week</h2>
+				<p class="lede">From the desk of Honorio J. Padr&oacute;n III. No spam. Unsubscribe anytime.</p>
+
+				<div class="newsletter-box">
+					<form class="newsletter-form" id="inlineForm" novalidate>
+						<!-- honeypot -->
+						<div class="hp" aria-hidden="true">
+							<label for="inline-company">Company (leave blank)</label>
+							<input type="text" id="inline-company" name="company" tabindex="-1" autocomplete="off" />
+						</div>
+						<div class="field-wrap">
+							<label class="form-label" for="inline-email">Email address</label>
+							<input class="form-control" type="email" id="inline-email" name="email"
+							       placeholder="you@example.com" inputmode="email" autocomplete="email"
+							       aria-describedby="inline-msg" />
+						</div>
+						<button type="submit" class="btn btn-cream">Subscribe</button>
+					</form>
+					<p class="inline-msg" id="inline-msg" role="status" aria-live="polite"></p>
+				</div>
+			</div> <!-- .container -->
+		</section> <!-- .newsletter-cnp -->
+
+		<!-- ============ METHODOLOGY ============ -->
+		<section class="methodology-section section-block" id="method" style="padding:44px 0;" aria-labelledby="method-h2">
+			<div class="container">
+				<h2 id="method-h2" class="sr-only">Methodology</h2>
+				<p style="border-left:2px solid rgba(20,33,61,.14);padding-left:22px;max-width:70ch;font-family:'Roboto',sans-serif;font-size:15px;color:#3d4a63;line-height:1.6;">
+					The exposure tiers are a synthesis of leading independent research on AI and work:
+					Oxford, OpenAI/UPenn, Goldman Sachs, McKinsey, IMF, and the World Economic Forum.
+					Figures are directional.
+				</p>
+			</div> <!-- .container -->
+		</section> <!-- .methodology-section -->
+
+	</main>
+
+	<!-- ============ FOOTER ============ -->
+	<footer class="site-footer">
+		<div class="footer-blocks">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 footer-about">
+						<h3 class="widget-title">CareerNextPivot</h3>
+						<p>Know your AI risk. Own your next move. Score your role against research from Stanford, Oxford, McKinsey, and Anthropic, then build your personalized three-phase Pivot Plan. By ExperienceBypass.</p>
+					</div> <!-- footer-about -->
+					<div class="col-lg-4 col-md-6 recent-post-widget">
+						<h3 class="widget-title">Explore</h3>
+						<ul class="post-list" style="list-style:none;padding:0;">
+							<li><a href="#explorer">Role Explorer</a></li>
+							<li><a href="#pricing">Pricing</a></li>
+							<li><a href="#features">Features</a></li>
+							<li><a href="#about">About H.A.</a></li>
+							<li><a href="#method">Methodology</a></li>
+						</ul>
+					</div> <!-- recent-post-widget -->
+					<div class="col-lg-4 col-md-6 newsletter-widget">
+						<h3 class="widget-title">The Pivot Brief</h3>
+						<p>Research-backed pivot moves, in five minutes a week.</p>
+						<a class="btn btn-main" href="#newsletter">Subscribe</a>
+					</div> <!-- newsletter-widget -->
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</div> <!-- .footer-blocks -->
+		<div class="bottom-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<p>&copy; 2026 CareerNextPivot by ExperienceBypass&trade;</p>
+					</div> <!-- .col-md-6 -->
+					<div class="col-md-6">
+						<ul class="bottom-links">
+							<li><a href="#" title="Policy connects at handoff">Privacy</a></li>
+							<li><a href="#" title="Terms connect at handoff">Terms</a></li>
+						</ul> <!-- .bottom-links -->
+					</div> <!-- .col-md-6 -->
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</div> <!-- .bottom-bar -->
+	</footer> <!-- .site-footer -->
+
+	<!-- ============ POPUP — The Pivot Brief ============ -->
+	<div class="popup-overlay" id="popupOverlay" hidden>
+		<div class="popup-card" id="popupCard" role="dialog" aria-modal="true"
+		     aria-labelledby="popup-h" aria-describedby="popup-desc">
+			<button type="button" class="popup-close" id="popupClose" aria-label="Close">
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+					<path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+				</svg>
+			</button>
+			<p class="cnp-eyebrow-left"><span class="rule" aria-hidden="true"></span>The Pivot Brief</p>
+			<h2 id="popup-h" tabindex="-1">A short letter on AI and the second half of your career.</h2>
+			<p class="popup-sub" id="popup-desc">Research-backed pivot moves, in five minutes a week. From the desk of Honorio J. Padr&oacute;n III.</p>
+
+			<form class="popup-form" id="popupForm" novalidate>
+				<!-- honeypot -->
+				<div class="hp" aria-hidden="true">
+					<label for="popup-company">Company (leave blank)</label>
+					<input type="text" id="popup-company" name="company" tabindex="-1" autocomplete="off" />
+				</div>
+				<div class="field-wrap">
+					<label class="form-label" for="popup-email">Email address</label>
+					<input class="form-control" type="email" id="popup-email" name="email"
+					       placeholder="you@example.com" inputmode="email" autocomplete="email"
+					       aria-describedby="popup-err" />
+					<p class="popup-err" id="popup-err" role="status" aria-live="polite"></p>
+				</div>
+				<button type="submit" class="btn btn-main">Subscribe</button>
+				<p class="popup-fine">No spam. Unsubscribe anytime.</p>
+			</form>
+		</div>
+	</div>
+
+	<!-- ============ TEMPLATE SCRIPTS ============ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/jquery.easypiechart.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/script.js"></script>
+
+	<!-- ============ CAREERNEXTPIVOT LOGIC (vanilla, self-contained) ============ -->
+	<script>
+	(function(){
+		"use strict";
+		var prefersReduced = window.matchMedia &&
+			window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+		/* ---------- storage helpers (private-browsing safe) ---------- */
+		function lsGet(k){ try{ return window.localStorage.getItem(k); }catch(e){ return null; } }
+		function lsSet(k,v){ try{ window.localStorage.setItem(k,v); }catch(e){} }
+		function ssGet(k){ try{ return window.sessionStorage.getItem(k); }catch(e){ return null; } }
+		function ssSet(k,v){ try{ window.sessionStorage.setItem(k,v); }catch(e){} }
+
+		function getBrief(){
+			var raw = lsGet('cnp_brief');
+			if(!raw) return { shownAt:0, subscribed:false };
+			try{ var o = JSON.parse(raw); return { shownAt:o.shownAt||0, subscribed:!!o.subscribed }; }
+			catch(e){ return { shownAt:0, subscribed:false }; }
+		}
+		function setBrief(patch){
+			var cur = getBrief();
+			if(patch.shownAt !== undefined) cur.shownAt = patch.shownAt;
+			if(patch.subscribed !== undefined) cur.subscribed = patch.subscribed;
+			lsSet('cnp_brief', JSON.stringify(cur));
+		}
+
+		/* ============================================================
+		   ROLE EXPLORER
+		   ============================================================ */
+		var ROLES = [
+			{ title:'Telemarketer', score:97, tier:'Extreme', trajectory:'Being eliminated',
+				pivots:[['AI Sales Ops Analyst','$70–110K'],['Customer Success Manager','$75–120K']] },
+			{ title:'Data Entry Clerk', score:95, tier:'Extreme', trajectory:'Being eliminated',
+				pivots:[['Data Steward','$70–105K'],['AI Training Data Specialist','$65–100K']] },
+			{ title:'Tax Preparer', score:93, tier:'Extreme', trajectory:'Being eliminated',
+				pivots:[['AI Compliance Officer','$95–150K'],['Advisory Accountant','$85–130K']] },
+			{ title:'Insurance Underwriter', score:91, tier:'Extreme', trajectory:'Being eliminated',
+				pivots:[['AI Risk Model Auditor','$100–160K'],['InsurTech Product Analyst','$90–140K']] },
+			{ title:'Legal Secretary', score:89, tier:'Very high', trajectory:'Being eliminated',
+				pivots:[['LegalTech Specialist','$90–150K'],['Contracts Ops Manager','$80–125K']] },
+			{ title:'Bookkeeper', score:88, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['FinOps Analyst','$80–125K'],['Advisory Accountant','$85–130K']] },
+			{ title:'Loan Officer', score:86, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['Fintech Relationship Manager','$90–145K'],['Credit AI Analyst','$85–135K']] },
+			{ title:'Customer Service Rep', score:85, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['Customer Success Manager','$75–120K'],['Human-AI Support Designer','$80–125K']] },
+			{ title:'Translator', score:84, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['Localization AI Editor','$75–115K'],['Cross-cultural UX Researcher','$85–130K']] },
+			{ title:'Paralegal', score:82, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['LegalTech Specialist','$90–150K'],['AI Compliance Officer','$95–150K']] },
+			{ title:'Staff Accountant', score:81, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['Audit Automation Lead','$90–140K'],['FinOps Analyst','$80–125K']] },
+			{ title:'Copywriter', score:78, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['AI Content Strategist','$85–135K'],['Brand Voice Director','$95–150K']] },
+			{ title:'Graphic Designer', score:77, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['Human-AI Interaction Designer','$95–150K'],['Creative Director','$100–160K']] },
+			{ title:'Executive Assistant', score:76, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['Chief of Staff','$95–155K'],['AI Workflow Designer','$85–130K']] },
+			{ title:'Journalist', score:75, tier:'Very high', trajectory:'Shrinking',
+				pivots:[['AI Research Editor','$80–125K'],['Communications Strategist','$90–140K']] },
+			{ title:'Market Research Analyst', score:74, tier:'High', trajectory:'Shrinking',
+				pivots:[['AI Product Manager','$120–195K'],['Insights Engineer','$95–150K']] },
+			{ title:'HR Generalist', score:70, tier:'High', trajectory:'Shrinking',
+				pivots:[['People Analytics Lead','$95–150K'],['AI Adoption Manager','$90–145K']] },
+			{ title:'Radiologic Technologist', score:68, tier:'High', trajectory:'Shrinking',
+				pivots:[['Clinical AI Analyst','$80–135K'],['Imaging Informatics Specialist','$85–140K']] },
+			{ title:'Software Developer', score:66, tier:'High', trajectory:'Shrinking',
+				pivots:[['MLOps Engineer','$115–185K'],['AI Security Specialist','$105–175K']] },
+			{ title:'Operations Manager', score:65, tier:'High', trajectory:'Shrinking',
+				pivots:[['AI Implementation Consultant','$110–175K'],['AI Product Manager','$120–195K']] }
+		];
+
+		var state = { search:'', exposure:'all', trajectory:'all' };
+		var grid = document.getElementById('roleGrid');
+		var countEl = document.getElementById('resultCount');
+
+		function tierLabel(tier){
+			return tier === 'Extreme' ? 'Extreme exposure'
+			     : tier === 'Very high' ? 'Very high exposure'
+			     : 'High exposure';
+		}
+
+		function escapeHtml(s){
+			return String(s).replace(/[&<>"']/g, function(c){
+				return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+			});
+		}
+
+		function cardHtml(r){
+			var pivots = r.pivots.map(function(p){
+				return '<li>' + escapeHtml(p[0]) + ' <span class="pay">' + escapeHtml(p[1]) + '</span></li>';
+			}).join('');
+			return '<div class="role-col"><article class="role-card">' +
+				'<h4>' + escapeHtml(r.title) + '</h4>' +
+				'<div class="role-score"><span class="num">' + r.score + '</span>' +
+				'<span class="tier">' + escapeHtml(tierLabel(r.tier)) + '</span></div>' +
+				'<span class="role-chip">' + escapeHtml(r.trajectory) + '</span>' +
+				'<span class="pivot-label">Pivot to</span>' +
+				'<ul class="pivot-list">' + pivots + '</ul>' +
+			'</article></div>';
+		}
+
+		function passesExposure(r){
+			if(state.exposure === 'all') return true;
+			return r.score >= parseInt(state.exposure, 10);
+		}
+		function passesTrajectory(r){
+			if(state.trajectory === 'all') return true;
+			return r.trajectory === state.trajectory;
+		}
+		function passesSearch(r){
+			if(!state.search) return true;
+			var q = state.search.toLowerCase();
+			if(r.title.toLowerCase().indexOf(q) !== -1) return true;
+			return r.pivots.some(function(p){ return p[0].toLowerCase().indexOf(q) !== -1; });
+		}
+
+		function render(){
+			if(!grid) return;
+			var matches = ROLES.filter(function(r){
+				return passesExposure(r) && passesTrajectory(r) && passesSearch(r);
+			});
+			if(matches.length === 0){
+				grid.innerHTML = '<p class="no-results">No roles match these filters. Try widening your search.</p>';
+			} else {
+				grid.innerHTML = matches.map(cardHtml).join('');
+			}
+			var n = matches.length;
+			if(countEl) countEl.textContent = n + (n === 1 ? ' role shown' : ' roles shown');
+		}
+
+		// filter toggles
+		document.querySelectorAll('.filter-toggle[data-filter]').forEach(function(btn){
+			btn.addEventListener('click', function(){
+				var filter = btn.dataset.filter, value = btn.dataset.value;
+				state[filter] = value;
+				document.querySelectorAll('.filter-toggle[data-filter="' + filter + '"]').forEach(function(b){
+					b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+				});
+				render();
+			});
+		});
+
+		// explorer search
+		var explorerSearch = document.getElementById('explorer-search');
+		if(explorerSearch){
+			explorerSearch.addEventListener('input', function(){
+				state.search = explorerSearch.value.trim();
+				render();
+			});
+		}
+
+		render();
+
+		/* ============================================================
+		   EMAIL VALIDATION + SUBSCRIBE
+		   ============================================================ */
+		var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+		function validEmail(v){ return EMAIL_RE.test(v) && v.length <= 254; }
+
+		function subscribe(payload){
+			return fetch('/api/subscribe', {
+				method:'POST',
+				headers:{ 'Content-Type':'application/json' },
+				body: JSON.stringify(payload)
+			}).then(function(res){
+				if(!res.ok) throw new Error('bad_status');
+				return res.json();
+			}).then(function(data){
+				if(!data || data.ok !== true) throw new Error('not_ok');
+				return data;
+			});
+		}
+
+		/* ---------- inline newsletter ---------- */
+		(function(){
+			var form = document.getElementById('inlineForm');
+			if(!form) return;
+			var emailEl = document.getElementById('inline-email');
+			var msgEl = document.getElementById('inline-msg');
+			var companyEl = document.getElementById('inline-company');
+			form.addEventListener('submit', function(ev){
+				ev.preventDefault();
+				var email = emailEl.value.trim();
+				msgEl.classList.remove('ok','err');
+				if(!validEmail(email)){
+					emailEl.setAttribute('aria-invalid','true');
+					msgEl.textContent = 'Please enter a valid email address.';
+					msgEl.classList.add('err');
+					return;
+				}
+				emailEl.removeAttribute('aria-invalid');
+				subscribe({ email:email, source:'inline', company:companyEl ? companyEl.value : '' })
+					.then(function(){
+						form.style.display = 'none';
+						msgEl.textContent = 'You’re on the list.';
+						msgEl.classList.add('ok');
+						setBrief({ subscribed:true });
+						// fbq('track','Lead');
+					})
+					.catch(function(){
+						msgEl.textContent = 'Something went wrong. Please try again.';
+						msgEl.classList.add('err');
+					});
+			});
+		})();
+
+		/* ============================================================
+		   POPUP — The Pivot Brief
+		   ============================================================ */
+		(function(){
+			var overlay = document.getElementById('popupOverlay');
+			var card = document.getElementById('popupCard');
+			var closeBtn = document.getElementById('popupClose');
+			var heading = document.getElementById('popup-h');
+			var form = document.getElementById('popupForm');
+			var emailEl = document.getElementById('popup-email');
+			var errEl = document.getElementById('popup-err');
+			var companyEl = document.getElementById('popup-company');
+			if(!overlay || !card) return;
+			var lastFocused = null;
+			var shownState = false;
+
+			var headerEl = document.querySelector('.site-header');
+			var mainEl = document.getElementById('main');
+			var footerEl = document.querySelector('.site-footer');
+			var supportsInert = ('inert' in HTMLElement.prototype);
+
+			function setBackgroundInert(on){
+				[headerEl, mainEl, footerEl].forEach(function(node){
+					if(!node) return;
+					if(supportsInert){ node.inert = on; }
+					else {
+						if(on){ node.setAttribute('aria-hidden','true'); }
+						else { node.removeAttribute('aria-hidden'); }
+					}
+				});
+			}
+
+			function focusables(){
+				return Array.prototype.slice.call(
+					card.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])')
+				).filter(function(el){
+					return el.offsetWidth > 0 || el.offsetHeight > 0 || el === document.activeElement;
+				});
+			}
+
+			function onKeydown(e){
+				if(e.key === 'Escape'){ e.preventDefault(); close(); return; }
+				if(e.key !== 'Tab') return;
+				var f = focusables();
+				if(f.length === 0) return;
+				var first = f[0], last = f[f.length - 1];
+				if(e.shiftKey && document.activeElement === first){
+					e.preventDefault(); last.focus();
+				} else if(!e.shiftKey && document.activeElement === last){
+					e.preventDefault(); first.focus();
+				}
+			}
+
+			function open(){
+				if(shownState) return;
+				shownState = true;
+				lastFocused = document.activeElement;
+				overlay.hidden = false;
+				void overlay.offsetWidth;
+				overlay.classList.add('open');
+				setBackgroundInert(true);
+				document.body.style.overflow = 'hidden';
+				document.addEventListener('keydown', onKeydown, true);
+				setBrief({ shownAt: Date.now() });
+				ssSet('cnp_brief_session','1');
+				setTimeout(function(){ if(heading) heading.focus(); }, prefersReduced ? 0 : 60);
+			}
+
+			function close(){
+				overlay.classList.remove('open');
+				setBackgroundInert(false);
+				document.body.style.overflow = '';
+				document.removeEventListener('keydown', onKeydown, true);
+				var finish = function(){ overlay.hidden = true; };
+				if(prefersReduced){ finish(); }
+				else { setTimeout(finish, 300); }
+				if(lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+			}
+
+			closeBtn.addEventListener('click', close);
+			overlay.addEventListener('click', function(e){
+				if(e.target === overlay) close();
+			});
+
+			// form submit
+			form.addEventListener('submit', function(ev){
+				ev.preventDefault();
+				var email = emailEl.value.trim();
+				errEl.textContent = '';
+				if(!validEmail(email)){
+					emailEl.setAttribute('aria-invalid','true');
+					errEl.textContent = 'Please enter a valid email address.';
+					if(!prefersReduced){
+						card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake');
+					}
+					return;
+				}
+				emailEl.removeAttribute('aria-invalid');
+				subscribe({ email:email, source:'popup', company:companyEl ? companyEl.value : '' })
+					.then(function(){
+						setBrief({ subscribed:true });
+						// fbq('track','Lead');
+						heading.textContent = 'You’re on the list.';
+						var sub = document.getElementById('popup-desc');
+						if(sub) sub.textContent = 'The next issue of The Pivot Brief is on its way.';
+						if(form && form.parentNode) form.parentNode.removeChild(form);
+						heading.focus();
+					})
+					.catch(function(){
+						emailEl.setAttribute('aria-invalid','true');
+						errEl.textContent = 'Something went wrong. Please try again.';
+						if(!prefersReduced){
+							card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake');
+						}
+					});
+			});
+
+			/* ---------- trigger logic ---------- */
+			function shouldShow(){
+				var brief = getBrief();
+				if(brief.subscribed) return false;
+				if(ssGet('cnp_brief_session') === '1') return false;
+				var sevenDays = 7 * 24 * 60 * 60 * 1000;
+				if(brief.shownAt && (Date.now() - brief.shownAt) < sevenDays) return false;
+				return true;
+			}
+
+			function maybeOpen(){
+				if(!shouldShow()) { cleanup(); return; }
+				open();
+				cleanup();
+			}
+
+			function onScroll(){
+				var doc = document.documentElement;
+				var scrollable = doc.scrollHeight - window.innerHeight;
+				var depth = scrollable > 0 ? window.scrollY / scrollable : 0;
+				if(depth >= 0.45) maybeOpen();
+			}
+
+			function cleanup(){
+				window.removeEventListener('scroll', onScroll, { passive:true });
+				if(dwellTimer){ clearTimeout(dwellTimer); dwellTimer = null; }
+			}
+
+			var dwellTimer = null;
+			if(shouldShow()){
+				window.addEventListener('scroll', onScroll, { passive:true });
+				dwellTimer = setTimeout(maybeOpen, 20000);
+			}
+		})();
+
+	})();
+	</script>
+</body>
+</html>
