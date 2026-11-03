@@ -1,5 +1,3 @@
-> **Archived on 2026-09-28.** This project is no longer maintained here. Florian keeps its copy in the private repository `florianrolke/client-resources` (folder `careernextpivot`). This repository stays online read-only so existing links keep working.
-
 # CareerNextPivot — Website Redesign
 
 Live demo of the full redesign, ready for your development team to take over.
